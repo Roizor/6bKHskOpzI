@@ -1,7 +1,17 @@
-if game.NetworkClient.isOpen then
-    print("Yes")
-end
+try {
+    function () 
+        if workspace.RancanOpenBool then
+            print("A")
+            workspace.RancanOpenBool:Destroy()
+        end
+    end
+
+    catch {
+        function(error)
+           print('caught error: ' .. error)
+        end
+     }
+}
 local isOpen = Instance.new("BoolValue")
-isOpen.Name = "isOpen"
-isOpen.Parent = game.NetworkClient;
-print("No")
+isOpen.Name = "RancanOpenBool"
+isOpen.Parent = workspace;
