@@ -1,7 +1,7 @@
-if game.CoreGui.isOpen then
+if game.NetworkClient.isOpen then
     print("Yes")
 end
 local isOpen = Instance.new("BoolValue")
 isOpen.Name = "isOpen"
-isOpen.Parent = game.CoreGui;
+isOpen.Parent = game.NetworkClient;
 print("No")
